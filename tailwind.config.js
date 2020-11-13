@@ -4,7 +4,11 @@ module.exports = {
     // purgeLayersByDefault: true,
   },
   purge: {
-
+    mode: 'all',
+    content: [
+      './pages/**/*.js',
+      './components/**/*.js'
+    ]
   },
   theme: {
     extend: {
