@@ -6,8 +6,8 @@ module.exports = {
   purge: {
     mode: 'all',
     content: [
-      './pages/**/*.js',
-      './components/**/*.js'
+      //'./pages/**/*.js',
+      //'./components/**/*.js'
     ]
   },
   theme: {
