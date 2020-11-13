@@ -1,65 +1,68 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Badge from '../components/normal/Badge'
+import { Badge as TailwindBadge } from '../components/tailwind/Badge'
+import Container from '../components/Container'
+import Content from '../components/Content'
+import PageFooter from '../components/PageFooter'
+import PageHeader from '../components/PageHeader'
+import Title from '../components/Title'
+import Square from '../components/Square'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <PageHeader pageTitle="Tailwind Demo" />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Content align="text-center">
+        <Container>
+          <Title>Utility First</Title>
+          <p>Normal way</p>
+          <Badge />
+          <p className="mb-4 mt-4">Tailwind way</p>
+          <TailwindBadge />
+        </Container>
+      </Content>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <Content>
+        <Container>
+          <div class="text-center">
+            <Title>Responsive</Title>
+          </div>
+          <div class="flex align-center justify-center">
+            <div class="md:flex lg:block xl:flex max-w-xl xl:max-w-5xl">
+              <div class="md:flex-shrink-0 lg:flex-shrink">
+                <img class="rounded-lg md:w-56 lg:w-full xl:w-64" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format" alt="Woman paying for a purchase" />
+              </div>
+              <div class="mt-4 md:mt-0 md:ml-6">
+                <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">
+                  <span class="md:hidden">Small</span>
+                  <span class="hidden md:inline lg:hidden">Medium</span>
+                  <span class="hidden lg:inline xl:hidden">Large</span>
+                  <span class="hidden xl:inline">X-Large</span>
+                </div>
+                <a href="#" class="block mt-1 text-lg lg:text-2xl leading-tight font-semibold text-gray-900 hover:underline">Finding customers for your new business</a>
+                <p class="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Content>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+      <Content align="text-center">
+        <Container>
+          <Title>Customization</Title>
+          <p><a className="text-blue-600 font-bold underline" target="_blank" href="https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js">tailwind.config.js</a></p>
+          <p>This is normal text.</p>
+          <p className="text-red-600">This is red-600 text.</p>
+          <p className="text-purple-300">This is purple-300 text.</p>
+          <p className="text-primary">This is my custom color, `primary`.</p>
+          <div className="flex justify-center items-center mt-10">
+            <Square color="bg-primary" />
+            <Square color="bg-blue-300" />
+            <Square color="bg-secondary" />
+          </div>
+        </Container>
+      </Content>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    </>
   )
 }
