@@ -8,7 +8,7 @@ const Customization = () => {
     <Content align="text-center">
       <Container>
         <Title>Customization</Title>
-        <p><a className="text-blue-600 font-bold underline" target="_blank" href="https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js">tailwind.config.js</a></p>
+        <p><a className="link" target="_blank" href="https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js">tailwind.config.js</a></p>
         <p>This is normal text.</p>
         <p className="text-red-600">This is red-600 text.</p>
         <p className="text-purple-300">This is purple-300 text.</p>
