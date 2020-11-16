@@ -7,7 +7,6 @@ import Utility from '../components/Utility'
 export default function Home() {
   return (
     <>
-      <PageHeader pageTitle="Tailwind Demo" />
 
       <Utility />
       <Responsive />
