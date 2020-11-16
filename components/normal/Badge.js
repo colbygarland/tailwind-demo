@@ -25,10 +25,6 @@ export default function Badge() {
         .chat-notification-logo-wrapper {
           flex - shrink: 0;
         }
-        .chat-notification-logo {
-          height: 3rem;
-          width: 3rem;
-        }
         .chat-notification-content {
           margin-left: 1.5rem;
           padding-top: 0.25rem;
